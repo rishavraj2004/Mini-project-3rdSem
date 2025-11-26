@@ -1,0 +1,146 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/* -------------------- NAVBAR -------------------- */
+.nav-bar {
+    width: 100%;
+    height: 80px;
+    padding: 0 24px;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon-nav {
+    font-size: 32px;
+    color: #386641;
+}
+
+.nav-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #386641;
+}
+
+.nav-welcome {
+    font-size: 24px;
+    font-weight: 600;
+    color: #386641;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.nav-user {
+    font-size: 20px;
+    color: black;
+    font-weight: 500;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-bar {
+        height: auto;
+        flex-direction: column;
+        gap: 6px;
+        padding: 12px;
+    }
+
+    .nav-welcome {
+        order: 3;
+        font-size: 20px;
+    }
+
+    .nav-left,
+    .nav-right {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* -------------------- MAIN PAGE -------------------- */
+.main-page {
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+    background-color: #f8f9fa;
+    height: calc(100vh - 80px);
+    /* full height minus navbar */
+}
+
+/* Left full-height textarea */
+.left-container {
+    flex: 1;
+}
+
+.main-input-field {
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 18px;
+    resize: none;
+}
+
+/* Right form container */
+.right-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input-field {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.submit-btn {
+    padding: 12px;
+    background-color: #386641;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.submit-btn:hover {
+    background-color: #2d5234;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .main-page {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .right-container {
+        width: 100%;
+    }
+}
