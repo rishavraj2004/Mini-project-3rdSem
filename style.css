@@ -90,6 +90,17 @@ html {
     flex-direction: column;
 }
 
+.button-div {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 48px;
+}
+
+.btn-link {
+    text-decoration: none;
+}
+
 .pro-video {
     width: 100%;
     max-width: 280px;

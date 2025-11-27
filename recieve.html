@@ -4,24 +4,27 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>REBUILDING IT</title>
+    <title>Trust Note – Retrieve</title>
     <link href="recieve-style.css" rel="stylesheet" />
 </head>
 
 <body class="everything">
+
+    <!-- LOGIN PAGE -->
     <div class="container">
         <div class="aboutuser">
-            <h2 class="title">WELCOME :) </h2>
+            <h2 class="title">WELCOME :)</h2>
+
             <div class="usericonchange">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="usericon">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                 </svg>
-
                 <h3 class="user">USER ID</h3>
             </div>
             <input class="boxuser" placeholder="Enter Your Username" />
+
             <div class="usericonchange">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="usericon">
@@ -33,11 +36,43 @@
             </div>
 
             <input type="password" class="password" placeholder="Enter Your Password" />
-            <!-- <h4 class="forget">Forget Password?</h4> -->
-            <button>SIGN IN</button>
+
+            <button class="signin-btn">SIGN IN</button>
         </div>
+
         <img class="img" src="logo.jpg" />
     </div>
+
+    <!-- TEXT VIEW PAGE (HIDDEN INITIALLY) -->
+    <div class="text-page" style="display:none; width:100vw; height:100vh; padding:40px;">
+        <h2>Your Note</h2>
+        <p class="final-text"></p>
+
+
+
+        <button class="copy-btn" style="
+        margin-top:20px;
+        padding:12px 25px;
+        background:#3498db;
+        color:white;
+        border:none;
+        border-radius:8px;
+        font-size:18px;
+        cursor:pointer;
+        box-shadow:0 4px 8px rgba(0,0,0,0.2);
+">Copy Text</button>
+
+    </div>
+
+    <!-- Firebase & CryptoJS -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+    <!-- Config + Logic -->
+    <script src="firebase-config.js"></script>
+    <script src="get.js"></script>
+
 </body>
 
 </html>

@@ -143,3 +143,46 @@ button:hover {
         display: none;
     }
 }
+
+/* Full-screen text page container */
+.text-page {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Note content (responsive) */
+.final-text {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 18px;
+    line-height: 1.6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+    max-width: 900px;
+    /* Desktop perfect */
+    width: 100%;
+    /* Full width on small screens */
+    margin: 20px auto;
+    /* Center horizontally */
+    word-wrap: break-word;
+    /* Prevent text from overflowing */
+}
+
+/* Responsive text scaling */
+@media (max-width: 768px) {
+    .final-text {
+        font-size: 16px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .final-text {
+        font-size: 15px;
+        padding: 12px;
+    }
+}
