@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Trust Note - Create Secure Notes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="create-style.css">
 </head>
 
@@ -15,7 +16,7 @@
             <h2 class="nav-title">Trust Note</h2>
         </div>
 
-        <h1 class="nav-welcome">Welcome To Trust Note!</h1>
+        <h1 class="nav-welcome">Create Secure Notes</h1>
 
         <div class="nav-right">
             <ion-icon class="icon-nav" name="person-circle-outline"></ion-icon>
@@ -25,19 +26,32 @@
 
     <section class="main-page">
         <div class="left-container">
-            <textarea class="main-input-field" placeholder="Enter Your Text Here"></textarea>
+            <h3><i class="fas fa-edit"></i> Your Note</h3>
+            <textarea class="main-input-field" placeholder="Enter your secure note here..."></textarea>
+            <div class="char-count">Character count: <span id="char-count">0</span></div>
         </div>
 
         <div class="right-container">
+            <h3><i class="fas fa-lock"></i> Secure Your Note</h3>
             <input class="input-field" type="text" placeholder="Enter ID">
             <input class="input-field" type="password" placeholder="Enter Password">
-            <button class="submit-btn">Submit</button>
+            <button class="submit-btn">
+                <i class="fas fa-shield-alt"></i> Secure & Save
+            </button>
+
+            <div class="security-note">
+                <i class="fas fa-info-circle"></i> Your note will be encrypted and stored securely.
+            </div>
+
+            <div class="success-message" id="success-message">
+                <i class="fas fa-check-circle"></i> Note saved successfully!
+            </div>
         </div>
     </section>
 
-
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     <!-- Scripts -->
     <!-- Firebase Web CDN -->
     <!-- Firebase COMPAT version -->
@@ -51,8 +65,7 @@
     <script src="firebase-config.js"></script>
 
     <!-- Page JS -->
-    <script src="create.js"></script> <!-- or get.js --
-
+    <script src="create.js"></script>
 </body>
 
 </html>
